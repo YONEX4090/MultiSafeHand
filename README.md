@@ -79,7 +79,6 @@ python plot.py --logdir ./runs/benchmark/HandOver/macpao
   <img src="safe-policy/assets/performance.png" width="100%"/>
 </div>
 ### Video
-
-https://github.com/YONEX4090/MultiSafHand/assets/video.mov
+https://github.com/YONEX4090/MultiSafHand/safe-policy/assets/video.mov
 
 
