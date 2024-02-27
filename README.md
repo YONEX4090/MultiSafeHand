@@ -1,6 +1,6 @@
 ## Advanced Dexterous Manipulation in MARL: MultiSafHand & MACPAO Integration
 
-In this project, we introduce MultiSafHand, which combines tasks ith different levels of difficulty and a variety of objects to facilitate learning to use both hands for dexterous manipulation. Concurrently, we clarify strategies in multi-agent optimization, with a notable emphasis on safety, offering innovative solutions in dexterous manipulation and MARL. MultiSafHand is adept at ensuring safe manipulation and supports effective methods for solving CMDPs. Additionally, we examine the complexity of safety issues in multi-agent environments and introduce MACPAO, a Safe MARL algorithm that has realized advancements in safety while maintaining the higher rewarding results comparable to existing state-of-the-art methods.
+In this paper, we propose Multi-Agent Constrained Proxi-mal Advantage Optimization (MACPAO), which considers the sequence of agent updates and integrates non-stationarity into sequential update schemes. we designed a system comprising three components: object datasets, bimanual dexterous tasks, and the Safe MARL algorithm.
 <div align="center">
   <img src="safe-policy/assets/overview.jpg" width="75%"/>
 </div>
@@ -33,26 +33,26 @@ pip install -e .
 ```
 ### Tasks
 #### HandOver
-This environment requires that one hand must adeptly toss an object, while the other must catch it with precision, avoiding excessive force that could lead to accidental object damage, unstable grasp, or potential safety risks.
+This task includes a number of aspects such as object relocation, precise grasping, and hand safety within a constrained MARL framework. Successful
+collaboration is one where one hand must adeptly toss an object, while the other must catch it accurately, avoiding excessive force that could lead to accidental object damage unstable grasp, or potential safety risks.
 <div align="left">
   <img src="safe-policy/assets/handover.jpg" width="75%"/>
 </div>
 
 #### CloseDoor
-This environment requires that closed doors can only be pushed inwards, but this is relatively difficult as the task cannot be accomplished by a simple push, which requires the hand to grab the
-handle and push it and then open it.
+This task requires robotic agents to learn how to close a door, which involves gripping the handle and exerting the appropriate amount of force, while considering factors such as the door's inertia and the design of the handle. In this environment, doors that are closed can only be pushed inward, adding complexity to the task as it cannot be achieved by a mere push but requires a coordinated maneuver to grab, push, and then pull the door open.
 <div align="left">
   <img src="safe-policy/assets/closedoor.jpg" width="75%"/>
 </div>
 
 #### OpenPenCap
-This environment involves two hands and pen, we need to use two hands to open the pen.
+This environment involves two hands and pen, we need to use two hands to open the pen and prevent slippage or damage.
 <div align="left">
   <img src="safe-policy/assets/openpencap.jpg" width="75%"/>
 </div>
 
 #### ClosePenCap
-This environment involves two hands and pen, we need to use two hands to close the pen.
+This environment involves two hands and pen, we need to use two hands to close the pen and prevent slippage or damage.
 <div align="left">
   <img src="safe-policy/assets/closepencap.jpg" width="75%"/>
 </div>
@@ -75,6 +75,8 @@ python plot.py --logdir ./runs/benchmark/HandOver
 python plot.py --logdir ./runs/benchmark/HandOver/macpao 
 ```
 ### Performance
+The comparison of performance across four tasks—Hand Over, Close the Door, and Open/Close Pen Cap—is depicted with rewards on the top side of the graph and costs on the bottom. The shaded areas represent the standard deviation of scores from more than three trials, showing that MACPAO outperforms all baseline Safe MARL algorithms (MACPO, MAPPO-Lag) as well as Unsafe MARL algorithms (HAPPO).
+
 <div align="left">
   <img src="safe-policy/assets/performance.png" width="100%"/>
 </div>
