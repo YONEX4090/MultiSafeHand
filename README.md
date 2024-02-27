@@ -33,8 +33,7 @@ pip install -e .
 ```
 ### Tasks
 #### HandOver
-This task includes a number of aspects such as object relocation, precise grasping, and hand safety within a constrained MARL framework. Successful
-collaboration is one where one hand must adeptly toss an object, while the other must catch it accurately, avoiding excessive force that could lead to accidental object damage unstable grasp, or potential safety risks.
+This environment requires that one hand must adeptly toss an object, while the other must catch it with precision, avoiding excessive force that could lead to accidental object damage, unstable grasp, or potential safety risks.
 <div align="left">
   <img src="safe-policy/assets/handover.jpg" width="75%"/>
 </div>
