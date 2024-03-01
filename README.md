@@ -1,4 +1,4 @@
-## Advanced Dexterous Manipulation in MARL: MultiSafHand & MACPAO Integration
+## Safe multi-agent reinforcement learning for bimanual dexterous manipulation
 
 In this paper, we propose Multi-Agent Constrained Proxi-mal Advantage Optimization (MACPAO), which considers the sequence of agent updates and integrates non-stationarity into sequential update schemes. we designed a system comprising three components: object datasets, bimanual dexterous tasks, and the Safe MARL algorithm. **Supplemental material** is available at the provided link [Supplementary_material](https://github.com/YONEX4090/MultiSafeHand/files/14459332/Supplementary_material_for_IROS.pdf).
 <div align="center">
