@@ -85,7 +85,10 @@ The comparison of performance across four tasks—Hand Over, Close the Door, and
 ### Video
 
 
-https://github.com/YONEX4090/MultiSafeHand/assets/148365280/4ca6e058-b39f-45c2-afbd-a5708a8ab5bd
+https://github.com/YONEX4090/MultiSafeHand/assets/148365280/47a097d6-9c19-4315-b6a7-4d9ea564c8d0
+
+
+
 
 
 
